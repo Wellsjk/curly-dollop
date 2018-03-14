@@ -1,13 +1,12 @@
-import json
 import pandas as pd
+import json
 import matplotlib.pyplot as plt
-import numpy as np
 
 
 stockTicker = 'AAPL'
+file = 'data/' + stockTicker + 'compact.csv'
+data = pd.read_csv(file)
 
-file = 'data/' + stockTicker + 'compact.json'
+# data.index = data['timestamp']
+print(data[['timestamp', 'close']])
 
-data = pd.read_json(file)
-
-print(data)
