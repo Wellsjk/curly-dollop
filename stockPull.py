@@ -19,12 +19,12 @@ while i < len(stockList):
     stockTicker = stockList[i]
 
     URL = 'https://www.alphavantage.co/query?' \
-          'function=TIME_SERIES_DAILY_ADJUSTED&symbol=' + stockTicker + '&outputsize=compact&apikey=' + apiKey
+          'function=TIME_SERIES_DAILY_ADJUSTED&symbol=' + stockTicker + '&outputsize=compact&apikey=' + apiKey + '&datatype=csv'
 
     response = requests.get(URL)
     print(response)
 
-    nFile = open("data/" + stockTicker + "compact.json", "w+")
+    nFile = open("data/" + stockTicker + "compact.csv", "w+")
     nFile.write(response.text)
     nFile.close()
     print("Data saved to: " + str(nFile.name))
