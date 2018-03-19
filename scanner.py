@@ -2,9 +2,9 @@ import pandas as pd
 import json
 import matplotlib.pyplot as plt
 
-thresholdPercent = .05
-days2check = 50
-stockTicker = 'XOM'
+thresholdPercent = .02
+days2check = 10
+stockTicker = 'AAPL'
 file = 'data/' + stockTicker + 'compact.csv'
 data = pd.read_csv(file)
 
