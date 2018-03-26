@@ -30,7 +30,7 @@ while p < len(stockList):
     i = days2check
     while i > 0:
         if stockData['close'][i] < thresholdAmount:
-            print('!Dropped more than threshold on: ' + str(stockData['timestamp'][i]) + ' Price: ' + str(stockData['close'][i])+ '!!!!!!')
+            print('!Dropped more than threshold on: ' + str(stockData['timestamp'][i]) + ' Price: ' + str(stockData['close'][i])+ '!!')
             i = i - 1
         else:
            # print('did not drop more than threshold, price: ' + str(stockData['close'][i])+ ' Date: ' + str(stockData['timestamp'][i]))
